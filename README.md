@@ -77,9 +77,7 @@ Para dar cumplimiento al requerimiento, se desea desarrollar una aplicación que
 
 ## Las excepciones y mensajes
 
-La aplicación debe ser capaz de suministrar información al usuario cuando cargue un archivo que **no
-sea el correcto**, es decir que no sea un archivo .txt. Las excepciones que debe manejar el sistema,
-con sus respectivos mensajes son:
+La aplicación debe ser capaz de suministrar información al usuario cuando cargue un archivo que **no sea el correcto**, es decir que no sea un archivo .txt. Las excepciones que debe manejar el sistema, con sus respectivos mensajes son:
 
 - Tipo de archivo incorrecto (_para validar que sea txt_)
 
