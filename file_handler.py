@@ -1,2 +1,7 @@
+from io import open
+
 def load_competition_results():
-	print("aaa")
+	file = open("./files/competencia.txt", "r")
+	lines = file.readlines()
+	print(lines)
+	file.close()

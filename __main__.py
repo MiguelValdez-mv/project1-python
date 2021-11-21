@@ -1,16 +1,12 @@
-# Dependencias de terceros
-from PyInquirer import prompt
-
-# Dependencias propias del proyecto
-from view import questions as qn
+from view import questions as qn, outputs as o
 from file_handler import load_competition_results
 
 def exit_project():
-	print("Hasta luego 👋😎")
+	print("\nHasta luego 👋😎")
 	exit()
 
 def continue_menu():
-	if (not prompt(qn.continue_question)["continue_question"]):
+	if (not o.print_menu_question(qn.continue_question)):
 		exit_project()
 
 def main():
@@ -18,10 +14,10 @@ def main():
 	selected_option = None
 
 	while True:
-		selected_option = prompt(qn.main_menu_question)["main_menu"]
+		selected_option = o.print_menu_question(qn.main_menu_question)
 
 		if (selected_option == "file"):
-			selected_option = prompt(qn.file_menu_question)["file_menu"]
+			selected_option = o.print_menu_question(qn.file_menu_question)
 
 			if (selected_option == "file_upload"):
 				participants = load_competition_results()
@@ -31,10 +27,9 @@ def main():
 
 			continue_menu()
 		elif (selected_option == "results"):
-			selected_option = prompt(qn.results_menu_question)["results_menu"]
+			selected_option = o.print_menu_question(qn.results_menu_question)
 			
 			continue_menu()
-
 		
 if __name__ == "__main__":
 	main()
