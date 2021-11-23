@@ -1,4 +1,4 @@
-main_menu_question = {
+MAIN_MENU_QUESTION = {
     "name": "main_menu",
     "title": "Menú principal:",
     "options": [
@@ -13,7 +13,7 @@ main_menu_question = {
     ]
 }
 
-file_menu_question = {
+FILE_MENU_QUESTION = {
     "name": "file_menu",
     "title": "Menú Archivo:",
     "options": [
@@ -28,25 +28,25 @@ file_menu_question = {
     ]
 }
 
-results_menu_question = {
+RESULTS_MENU_QUESTION = {
     "name": "results_menu",
     "title": "Menú Resultados:",
     "options": [
         {
             "message": "🧒 Lista de participantes",
-            "value": "list_participants"
+            "value": "list_competitors"
         },
         {
             "message": "📊 Cantidad total de participantes",
-            "value": "number_participants"
+            "value": "number_competitors"
         },
         {
             "message": "📊 Cantidad de participantes por grupo etario",
-            "value": "number_participants_per_age_group"
+            "value": "number_competitors_per_age_group"
         },
         {
             "message": "📊 Cantidad de participantes por sexo",
-            "value": "number_participants_per_sex"
+            "value": "number_competitors_per_sex"
         },
         {
             "message": "🏆 Ganadores por grupo etario",
@@ -66,16 +66,29 @@ results_menu_question = {
         },
         {
             "message": "📈 Histograma de participantes por grupo etario",
-            "value": "histogram_participants_per_age_group"
+            "value": "histogram_competitors_per_age_group"
         },
     ]
 }
 
-continue_question = {
+CONTINUE_MENU_QUESTION = {
     "name": "continue_menu",
     "title": "¿Desea regresar al Menú Principal?:",
     "options": [
         {"message": "✅ Sí", "value": True},
         {"message": "❎ No", "value": False}
     ],
+}
+
+COMPETITOR_ATTRIBUTES = {
+    "ci": "Cédula",
+    "first_last_name": "1er Apellido",
+    "second_last_name": "2do Apellido",
+    "name": "Nombre",
+    "middle_initial": "Inicial 2do Nombre",
+    "sex": "Sexo",
+    "age": "Edad",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos"
 }

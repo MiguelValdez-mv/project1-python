@@ -69,11 +69,9 @@ Para dar cumplimiento al requerimiento, se desea desarrollar una aplicación que
 
       _Nota_: Se considera **ganador** al participante que ha empleado **menos tiempo** en ejecutar la competencia
 
-- Después de presentar cada acción del menú debe existir una opción para retornar al menú
-  principal
+- Después de presentar cada acción del menú debe existir una opción para retornar al menú principal
 
-- La aplicación debe estar activa mientras el usuario no seleccione la opción de salir del menú
-  Archivos
+- La aplicación debe estar activa mientras el usuario no seleccione la opción de salir del menú Archivos
 
 ## Las excepciones y mensajes
 
