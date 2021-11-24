@@ -4,6 +4,15 @@ from constants import COMPETITOR_ATTRIBUTES
 
 
 def load_competition_results():
+    """
+    Lee los resultados de la competención dado el nombre
+    de un archivo dentro de la carpeta 'file'
+
+    Retorna
+    -------
+    list: Lista de diccionarios con la información de cada competidor
+    """
+
     competitors = []
     competitor_keys_list = list(COMPETITOR_ATTRIBUTES.keys())
 

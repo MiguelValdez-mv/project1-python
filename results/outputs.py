@@ -3,6 +3,14 @@ from results import utils
 
 
 def print_competitor_details(competitor={}):
+    """
+    Imprime los detalles de un competidor en una sola línea
+
+    Parámetros
+    ----------
+    competitor (dictionary): Información del competidor        
+    """
+
     competitor_details = [
         f"{COMPETITOR_ATTRIBUTES[key]}: {competitor[key]}" for key in list(competitor.keys())
     ]
@@ -10,6 +18,15 @@ def print_competitor_details(competitor={}):
 
 
 def print_competitors_table(list_title, competitors=[]):
+    """
+    Imprime una tabla de competidores
+
+    Parámetros
+    ----------
+    list_title (str): Título de la tabla
+    competitors (list): Lista de competidores   
+    """
+
     if(utils.list_competitors_is_empty(competitors)):
         return
 
@@ -23,10 +40,26 @@ def print_competitors_table(list_title, competitors=[]):
 
 
 def print_list_all_competitors(competitors=[]):
+    """
+    Imprime una tabla de todos los competidores registrados
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     print_competitors_table("🧒 Lista de participantes:", competitors)
 
 
 def print_total_number_competitors(competitors=[]):
+    """
+    Imprime la cantidad total de participantes registrados
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     print("\n📊 Cantidad total de participantes\n")
     print(
         f"La cantidad total de participantes es de: {len(competitors)} participante(s)"
@@ -34,6 +67,14 @@ def print_total_number_competitors(competitors=[]):
 
 
 def print_number_competitors_per_age_group(competitors=[]):
+    """
+    Imprime la cantidad de competidores registrados por grupo etario
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     format_text = "{:<10}" * 3
     juniors, seniors, masters = utils.get_competitors_list_per_age_group(
         competitors
@@ -45,6 +86,14 @@ def print_number_competitors_per_age_group(competitors=[]):
 
 
 def print_number_competitors_per_sex(competitors=[]):
+    """
+    Imprime la cantidad de competidores registrados por sexo
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     mens, womens = utils.get_competitors_per_sex(competitors)
 
     print("\n📊 Cantidad de participantes por sexo\n")
@@ -54,6 +103,14 @@ def print_number_competitors_per_sex(competitors=[]):
 
 
 def print_winners_per_age_group(competitors=[]):
+    """
+    Imprime los ganadores de la competición por grupo etario
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     if(utils.list_competitors_is_empty(competitors)):
         return
 
@@ -72,6 +129,14 @@ def print_winners_per_age_group(competitors=[]):
 
 
 def print_winners_per_sex(competitors=[]):
+    """
+    Imprime los ganadores de la competición por sexo
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     if(utils.list_competitors_is_empty(competitors)):
         return
 
@@ -87,6 +152,14 @@ def print_winners_per_sex(competitors=[]):
 
 
 def print_winners_per_age_group_and_sex(competitors=[]):
+    """
+    Imprime los ganadores de la competición por grupo etario y sexo
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     if(utils.list_competitors_is_empty(competitors)):
         return
 
@@ -108,6 +181,14 @@ def print_winners_per_age_group_and_sex(competitors=[]):
 
 
 def print_overall_winner(competitors=[]):
+    """
+    Imprime el ganador general de la competición
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     if(utils.list_competitors_is_empty(competitors)):
         return
 
@@ -118,6 +199,15 @@ def print_overall_winner(competitors=[]):
 
 
 def print_histogram_competitors_per_age_group(competitors=[]):
+    """
+    Imprime el historigrama de los competidores registrados por grupo
+    etario
+
+    Parámetros
+    ----------
+    competitors (list): Lista de competidores   
+    """
+
     juniors, seniors, masters = utils.get_competitors_list_per_age_group(
         competitors
     )

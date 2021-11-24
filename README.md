@@ -35,7 +35,7 @@ Para dar cumplimiento al requerimiento, se desea desarrollar una aplicación que
 
       - Juniors, iguales o menores a 25 años,
 
-      - Seniors, iguales o mayores de 25 y menores o iguales a 40 años y
+      - Seniors, mayores de 25 y menores o iguales a 40 años y
 
       - Masters, mayores de 40 años
 

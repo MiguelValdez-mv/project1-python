@@ -1,3 +1,9 @@
+"""
+Pregunta del menú prinicipal de la aplicación
+
+Contiene el nombre del menú, el título que será mostrado en consola
+junto con las posibles respuestas/opciones a ser seleccioanadas por el usuario
+"""
 MAIN_MENU_QUESTION = {
     "name": "main_menu",
     "title": "Menú principal:",
@@ -13,6 +19,7 @@ MAIN_MENU_QUESTION = {
     ]
 }
 
+"""Pregunta del menú archivo"""
 FILE_MENU_QUESTION = {
     "name": "file_menu",
     "title": "Menú Archivo:",
@@ -28,6 +35,7 @@ FILE_MENU_QUESTION = {
     ]
 }
 
+"""Pregunta del menú resultados"""
 RESULTS_MENU_QUESTION = {
     "name": "results_menu",
     "title": "Menú Resultados:",
@@ -71,6 +79,7 @@ RESULTS_MENU_QUESTION = {
     ]
 }
 
+"""Pregunta del menú continuar"""
 CONTINUE_MENU_QUESTION = {
     "name": "continue_menu",
     "title": "¿Desea regresar al Menú Principal?:",
@@ -80,6 +89,7 @@ CONTINUE_MENU_QUESTION = {
     ],
 }
 
+"""Contiene todos los atributos de un competidor"""
 COMPETITOR_ATTRIBUTES = {
     "ci": "CÉDULA",
     "first_last_name": "1º APELLIDO",
@@ -93,6 +103,7 @@ COMPETITOR_ATTRIBUTES = {
     "seconds": "SEGUNDOS"
 }
 
+"""Géneros de los competidores"""
 SEXES = {
     "MALE": "M",
     "FEMALE": "F",

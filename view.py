@@ -16,6 +16,18 @@ results_menu_options = {
 
 
 def print_menu_question(question):
+    """
+    Imprime una pregunta tipo menú junto con sus posibles respuestas
+
+    Parámetros
+    ----------
+    question (dictionary): Diccionario con el nombre, titulo, respuestas de la pregunta 
+
+    Retorna
+    -------
+    str: Cadena con la opción seleccionada
+    """
+
     len_options = len(question["options"])
 
     print(f"\n{question['title']}\n")
@@ -41,16 +53,15 @@ def print_menu_question(question):
 
 
 def exit_menu():
+    """Muestra un mensaje al salir del programa"""
+
     print("\nHasta luego 👋😎")
     exit()
 
 
-def continue_menu():
-    if (not print_menu_question(constants.CONTINUE_MENU_QUESTION)):
-        exit_menu()
-
-
 def main_menu():
+    """Muestra el menú principal del programa"""
+
     competitors = []
 
     while True:
