@@ -75,8 +75,8 @@ CONTINUE_MENU_QUESTION = {
     "name": "continue_menu",
     "title": "¿Desea regresar al Menú Principal?:",
     "options": [
-        {"message": "✅ Sí", "value": True},
-        {"message": "❎ No", "value": False}
+        {"message": "✅ Sí", "value": "return_to_main_menu"},
+        {"message": "❎ No", "value": "stay_in_current_menu"}
     ],
 }
 

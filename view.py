@@ -54,23 +54,39 @@ def main_menu():
     competitors = []
 
     while True:
-        selected_option = print_menu_question(constants.MAIN_MENU_QUESTION)
+        selected_main_menu_option = print_menu_question(
+            constants.MAIN_MENU_QUESTION
+        )
 
-        if (selected_option == "file"):
-            selected_option = print_menu_question(constants.FILE_MENU_QUESTION)
+        if (selected_main_menu_option == "file"):
+            selected_file_menu_option = None
 
-            if (selected_option == "file_upload"):
-                competitors = file_handler.load_competition_results()
+            while selected_file_menu_option != "return_to_main_menu":
 
-            elif (selected_option == "exit"):
-                exit_menu()
+                selected_file_menu_option = print_menu_question(
+                    constants.FILE_MENU_QUESTION
+                )
 
-            continue_menu()
-        elif (selected_option == "results"):
-            selected_option = print_menu_question(
-                constants.RESULTS_MENU_QUESTION
-            )
+                if (selected_file_menu_option == "file_upload"):
+                    competitors = file_handler.load_competition_results()
 
-            results_menu_options[selected_option](competitors)
+                elif (selected_file_menu_option == "exit"):
+                    exit_menu()
 
-            continue_menu()
+                selected_file_menu_option = print_menu_question(
+                    constants.CONTINUE_MENU_QUESTION
+                )
+
+        elif (selected_main_menu_option == "results"):
+            selected_results_menu_option = None
+
+            while selected_results_menu_option != "return_to_main_menu":
+                selected_results_menu_option = print_menu_question(
+                    constants.RESULTS_MENU_QUESTION
+                )
+
+                results_menu_options[selected_results_menu_option](competitors)
+
+                selected_results_menu_option = print_menu_question(
+                    constants.CONTINUE_MENU_QUESTION
+                )
