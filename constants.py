@@ -81,14 +81,19 @@ CONTINUE_MENU_QUESTION = {
 }
 
 COMPETITOR_ATTRIBUTES = {
-    "ci": "Cédula",
-    "first_last_name": "1er Apellido",
-    "second_last_name": "2do Apellido",
-    "name": "Nombre",
-    "middle_initial": "Inicial 2do Nombre",
-    "sex": "Sexo",
-    "age": "Edad",
-    "hours": "Horas",
-    "minutes": "Minutos",
-    "seconds": "Segundos"
+    "ci": "CÉDULA",
+    "first_last_name": "1º APELLIDO",
+    "second_last_name": "2º APELLIDO",
+    "name": "NOMBRE",
+    "middle_initial": "I.2º NOMBRE",
+    "sex": "SEXO",
+    "age": "EDAD",
+    "hours": "HORAS",
+    "minutes": "MINUTOS",
+    "seconds": "SEGUNDOS"
+}
+
+SEXES = {
+    "MALE": "M",
+    "FEMALE": "F",
 }

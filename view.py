@@ -1,5 +1,15 @@
 import file_handler
 import constants
+from results import outputs
+
+results_menu_options = {
+    "list_competitors": outputs.print_list_all_competitors,
+    "number_competitors": outputs.print_total_number_competitors,
+    "number_competitors_per_age_group": outputs.print_number_competitors_per_age_group,
+    "number_competitors_per_sex": outputs.print_number_competitors_per_sex,
+    "histogram_competitors_per_age_group": outputs.print_histogram_competitors_per_age_group,
+    "overall_winner": outputs.print_overall_winner
+}
 
 
 def print_menu_question(question):
@@ -57,5 +67,7 @@ def main_menu():
             selected_option = print_menu_question(
                 constants.RESULTS_MENU_QUESTION
             )
+
+            results_menu_options[selected_option](competitors)
 
             continue_menu()
