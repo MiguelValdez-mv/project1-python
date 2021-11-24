@@ -60,11 +60,11 @@ Para dar cumplimiento al requerimiento, se desea desarrollar una aplicación que
       - Histograma de participante por grupo etario. Representado de la siguiente forma:
 
       ```
-      	Juniors (x): | ***********
-      	Masters (y): | ********************
-      	Seniors (z): | ********
+      Juniors (x): | ***********
+      Masters (y): | ********************
+      Seniors (z): | ********
 
-      	# Donde x, y y z representan a la cantidad de participantes por grupo etario
+      # Donde x, y y z representan a la cantidad de participantes por grupo etario
       ```
 
       _Nota_: Se considera **ganador** al participante que ha empleado **menos tiempo** en ejecutar la competencia
@@ -82,3 +82,7 @@ La aplicación debe ser capaz de suministrar información al usuario cuando carg
 - Cantidad de columnas incorrecto (_las líneas tienen la información indicada anteriormente_)
 
 Al producirse cualquier de los fallos mencionados debe notificar al usuario con un mensaje y permitiéndole repetir la acción de forma correcta.
+
+## Ejecutar el proyecto
+
+Ejecute el siguiente comando: `python3 __main__.py`
