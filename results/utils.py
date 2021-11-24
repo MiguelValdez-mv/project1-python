@@ -2,6 +2,14 @@ from datetime import time
 from constants import SEXES
 
 
+def list_competitors_is_empty(competitors=[]):
+    if(not competitors):
+        print("\nActualmente no hay participantes registrados...")
+        return True
+
+    return False
+
+
 def is_junior_competitor(competitor={}):
     return int(competitor["age"]) <= 25
 

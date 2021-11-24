@@ -2,14 +2,6 @@ from constants import COMPETITOR_ATTRIBUTES
 from results import utils
 
 
-def list_competitors_is_empty(competitors=[]):
-    if(not competitors):
-        print("\nActualmente no hay participantes registrados...")
-        return True
-
-    return False
-
-
 def print_competitor_details(competitor={}):
     competitor_details = [
         f"{COMPETITOR_ATTRIBUTES[key]}: {competitor[key]}" for key in list(competitor.keys())
@@ -18,7 +10,7 @@ def print_competitor_details(competitor={}):
 
 
 def print_competitors_table(list_title, competitors=[]):
-    if(list_competitors_is_empty(competitors)):
+    if(utils.list_competitors_is_empty(competitors)):
         return
 
     format_text = "{:<10} {:<15} {:<15} {:<15} {:<15} {:<10} {:<10} {:<10} {:<10} {:<10}"
@@ -62,7 +54,7 @@ def print_number_competitors_per_sex(competitors=[]):
 
 
 def print_winners_per_age_group(competitors=[]):
-    if(list_competitors_is_empty(competitors)):
+    if(utils.list_competitors_is_empty(competitors)):
         return
 
     juniors, seniors, masters = utils.get_competitors_list_per_age_group(
@@ -80,7 +72,7 @@ def print_winners_per_age_group(competitors=[]):
 
 
 def print_winners_per_sex(competitors=[]):
-    if(list_competitors_is_empty(competitors)):
+    if(utils.list_competitors_is_empty(competitors)):
         return
 
     mens, womens = utils.get_competitors_per_sex(competitors)
@@ -95,7 +87,7 @@ def print_winners_per_sex(competitors=[]):
 
 
 def print_winners_per_age_group_and_sex(competitors=[]):
-    if(list_competitors_is_empty(competitors)):
+    if(utils.list_competitors_is_empty(competitors)):
         return
 
     juniors, seniors, masters = utils.get_competitors_list_per_age_group(
@@ -116,7 +108,7 @@ def print_winners_per_age_group_and_sex(competitors=[]):
 
 
 def print_overall_winner(competitors=[]):
-    if(list_competitors_is_empty(competitors)):
+    if(utils.list_competitors_is_empty(competitors)):
         return
 
     winner = utils.get_winner(competitors)
