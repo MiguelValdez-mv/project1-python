@@ -7,8 +7,11 @@ results_menu_options = {
     "number_competitors": outputs.print_total_number_competitors,
     "number_competitors_per_age_group": outputs.print_number_competitors_per_age_group,
     "number_competitors_per_sex": outputs.print_number_competitors_per_sex,
+    "winners_per_age_group": outputs.print_winners_per_age_group,
+    "winners_per_sex": outputs.print_winners_per_sex,
+    "winners_per_age_group_and_sex": outputs.print_winners_per_age_group_and_sex,
+    "overall_winner": outputs.print_overall_winner,
     "histogram_competitors_per_age_group": outputs.print_histogram_competitors_per_age_group,
-    "overall_winner": outputs.print_overall_winner
 }
 
 

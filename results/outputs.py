@@ -50,6 +50,51 @@ def print_number_competitors_per_sex(competitors=[]):
     )
 
 
+def print_winners_per_age_group(competitors=[]):
+    juniors, seniors, masters = utils.get_competitors_list_per_age_group(
+        competitors
+    )
+    winners_per_age_group = [
+        utils.get_winner(juniors),
+        utils.get_winner(seniors),
+        utils.get_winner(masters),
+    ]
+
+    print_competitors_table(
+        "🏆 Ganadores por grupo etario", winners_per_age_group
+    )
+
+
+def print_winners_per_sex(competitors=[]):
+    mens, womens = utils.get_competitors_per_sex(competitors)
+    winners_per_sex = [
+        utils.get_winner(mens),
+        utils.get_winner(womens),
+    ]
+
+    print_competitors_table(
+        "🏆 Ganadores por sexo", winners_per_sex
+    )
+
+
+def print_winners_per_age_group_and_sex(competitors=[]):
+    juniors, seniors, masters = utils.get_competitors_list_per_age_group(
+        competitors
+    )
+    winners_per_age_group_and_sex = map(
+        utils.get_winner,
+        list(
+            utils.get_competitors_per_sex(juniors) +
+            utils.get_competitors_per_sex(seniors) +
+            utils.get_competitors_per_sex(masters)
+        ),
+    )
+
+    print_competitors_table(
+        "🏆 Ganadores por grupo etario y sexo", winners_per_age_group_and_sex
+    )
+
+
 def print_overall_winner(competitors=[]):
     winner = utils.get_winner(competitors)
 
